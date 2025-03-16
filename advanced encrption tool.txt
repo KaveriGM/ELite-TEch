@@ -1,0 +1,7 @@
+Generate Key: The generate_key function derives a key from the provided password using PBKDF2HMAC with a SHA-256 hash algorithm.
+
+Encrypt File: The encrypt_file function encrypts the file using AES in CBC mode with a randomly generated salt and IV (Initialization Vector). It pads the data to ensure it's a multiple of the block size and writes the encrypted data along with the salt and IV to a new file with a .enc extension.
+
+Decrypt File: The decrypt_file function reads the encrypted file, extracts the salt, IV, and encrypted data, and decrypts the data using the derived key. It then unpads the data and writes the original content to a new file.
+
+Main Function: The main function provides a command-line interface for users to choose between encryption and decryption. It continuously prompts the user until they choose to exit.
